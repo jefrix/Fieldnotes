@@ -1,15 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Basic metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Signature Problem — Why the Quantum Threat to Cryptocurrency Is Not What Most People Think</title>
+<title>The Signature Problem: Why the Quantum Threat to Cryptocurrency Is Not What Most People Think | Fieldnotes</title>
+<meta name="description" content="Bitcoin doesn't use encryption. It uses signatures. The quantum threat to cryptocurrency is not a machine that arrives one morning and drains every wallet — it is a slow-motion governance test, and most of the coverage is asking the wrong question.">
+
+<!-- Authorship and categorization -->
+<meta name="author" content="Jeff Ricks">
+<meta name="publisher" content="Fieldnotes">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta http-equiv="Content-Language" content="en-US">
+
+<!-- Article tags -->
+<meta name="article:section" content="Science and Security">
+<meta name="article:tag" content="quantum computing">
+<meta name="article:tag" content="cryptocurrency">
+<meta name="article:tag" content="Bitcoin security">
+<meta name="article:tag" content="Shor's algorithm">
+<meta name="article:tag" content="post-quantum cryptography">
+<meta name="article:tag" content="ML-DSA">
+<meta name="article:tag" content="secp256k1">
+<meta name="article:tag" content="Google Quantum AI">
+<meta name="article:tag" content="CRQC">
+<meta name="article:tag" content="Satoshi Nakamoto">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://jefrix.github.io/Fieldnotes/signature-problem.html">
+
+<!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Fieldnotes">
+<meta property="og:title" content="The Signature Problem — The Quantum Threat to Cryptocurrency, Reconsidered">
+<meta property="og:description" content="Bitcoin doesn't use encryption. It uses signatures. The quantum threat is not a machine that drains wallets overnight — it is a slow-motion governance test, and most coverage is asking the wrong question.">
+<meta property="og:url" content="https://jefrix.github.io/Fieldnotes/signature-problem.html">
+<meta property="og:image" content="https://jefrix.github.io/Fieldnotes/assets/og-signature-problem.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Signature Problem — Fieldnotes dispatch on quantum computing and cryptocurrency">
+<meta property="article:published_time" content="2026-04-10T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-10T00:00:00Z">
+<meta property="article:author" content="Jeff Ricks">
+<meta property="article:section" content="Science and Security">
+<meta property="article:tag" content="quantum computing">
+<meta property="article:tag" content="cryptocurrency">
+<meta property="article:tag" content="post-quantum cryptography">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Signature Problem — Quantum and Cryptocurrency, Reconsidered">
+<meta name="twitter:description" content="Why the quantum threat to crypto isn't what the headlines say — and why 6.7 million Bitcoin sit in addresses that can't be migrated.">
+<meta name="twitter:image" content="https://jefrix.github.io/Fieldnotes/assets/og-signature-problem.jpg">
+<meta name="twitter:image:alt" content="The Signature Problem — Fieldnotes dispatch">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Signature Problem: Why the Quantum Threat to Cryptocurrency Is Not What Most People Think",
+  "alternativeHeadline": "A Structured Reading of the April 2026 Google Whitepaper and Its Implications for Bitcoin",
+  "description": "Bitcoin doesn't use encryption. It uses signatures. The quantum threat to cryptocurrency is not a machine that arrives one morning and drains every wallet — it is a slow-motion governance test, and most of the coverage is asking the wrong question.",
+  "image": "https://jefrix.github.io/Fieldnotes/assets/og-signature-problem.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Jeff Ricks",
+    "url": "https://jefrix.github.io/Fieldnotes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fieldnotes",
+    "url": "https://jefrix.github.io/Fieldnotes/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jefrix.github.io/Fieldnotes/favicon.ico"
+    }
+  },
+  "datePublished": "2026-04-10",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jefrix.github.io/Fieldnotes/signature-problem.html"
+  },
+  "articleSection": "Science and Security",
+  "keywords": "quantum computing, cryptocurrency security, Bitcoin quantum threat, Shor's algorithm, post-quantum cryptography, ML-DSA, secp256k1, Google Quantum AI, CRQC, cryptographically relevant quantum computer, Satoshi Nakamoto dormant coins, blockchain migration, NIST post-quantum standards, on-spend attack, at-rest attack",
+  "wordCount": 4000,
+  "inLanguage": "en-US",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Quantum computing"
+    },
+    {
+      "@type": "Thing",
+      "name": "Cryptocurrency security"
+    },
+    {
+      "@type": "Thing",
+      "name": "Post-quantum cryptography"
+    }
+  ],
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Google Quantum AI"
+    },
+    {
+      "@type": "Organization",
+      "name": "National Institute of Standards and Technology"
+    },
+    {
+      "@type": "Thing",
+      "name": "Bitcoin"
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Fieldnotes",
+    "url": "https://jefrix.github.io/Fieldnotes/"
+  }
+}
+</script>
+
+<!-- Fonts and stylesheet -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/dispatch.css">
+
 </head>
+```
+
+---
+
+## How to Deploy These
+
+For each page, replace everything from `<!DOCTYPE html>` through `</head>` with the corresponding block above. The `<body>` and everything after it stays unchanged. Four files, four copy-paste operations.
+
+## The Hero Images You Still Need
+
+You'll want four 1200×630 pixel JPG files in your `assets` folder:
+
+- `og-fieldnotes.jpg` — for the landing page
+- `og-one-year-threshold.jpg` — for Dispatch №01
+- `og-ugarit-warning.jpg` — for Dispatch №02
+- `og-signature-problem.jpg` — for Dispatch №03
+
+The easiest way to make these: visit each page in your browser, take a screenshot of the hero section (the big title area at the top), crop it to 1200×630, and save as JPG. You'll end up with four images that match the visual identity of each dispatch perfectly and required zero design work. If you don't have a screenshot tool that can crop to a specific aspect ratio, any image editor can do it — even the built-in Photos app on macOS or the Snipping Tool on Windows.
+
+Until you make the images, the social previews will show a broken image, but the rest of the SEO work is still active. You can add the images later without needing to touch the HTML.
+
+## Two Optional Extras
+
+If you want to go further, the two files I'd add to the root of your repo are:
+
+**`robots.txt`** — a three-line file that tells search engines they're welcome and points them at the sitemap:
+```
+User-agent: *
+Allow: /
+Sitemap: https://jefrix.github.io/Fieldnotes/sitemap.xml
 <body>
 
 <!-- ========== HERO ========== -->
