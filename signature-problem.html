@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Signature Problem — Why the Quantum Threat to Cryptocurrency Is Not What Most People Think</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dispatch.css">
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<header class="hero hero-dispatch">
+  <div class="masthead">
+    <span class="mark">◆ <a href="index.html">FIELDNOTES</a> / SCIENCE & SECURITY</span>
+    <span>№03 — APRIL 2026</span>
+  </div>
+
+  <div class="hero-content">
+    <div class="eyebrow">A dispatch in six movements</div>
+    <h1 class="title">The Signature<br><em>Problem</em></h1>
+    <p class="subtitle">Why the quantum threat to cryptocurrency is not what most people think it is — and why the real danger is a governance test, not a machine.</p>
+
+    <div class="meta-row">
+      <div>
+        <span class="label">Published</span>
+        <span class="value amber">April 2026</span>
+      </div>
+      <div>
+        <span class="label">Reading time</span>
+        <span class="value">~25 minutes</span>
+      </div>
+      <div>
+        <span class="label">Filed under</span>
+        <span class="value">Science / Security</span>
+      </div>
+      <div>
+        <span class="label">Companion to</span>
+        <span class="value">№02 — The Ugarit Warning</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ARTICLE ========== -->
+<article>
+
+  <!-- LEDE -->
+  <div class="container lede">
+    <p>On April 5, 2026, Google Quantum AI published a whitepaper that did not announce a new machine. It did something stranger and, for cryptocurrency, more consequential. It announced that the blueprints for a machine that does not yet exist had gotten shorter.</p>
+
+    <p>The specific number was this: fewer than 500,000 physical qubits on a fast-clock superconducting architecture could run Shor's algorithm against Bitcoin's signature scheme, potentially in under nine minutes — faster than Bitcoin's ten-minute block time. The previous published estimate had been roughly twenty times larger. Nothing had been built. No quantum computer of that scale existed in April 2026 and none exists as I write this. What had happened was that the research community's understanding of <em>how much machine you would need</em> had collapsed by nearly an order of magnitude in a single paper.</p>
+
+    <p>Markets reacted the way markets react to news they don't understand. Quantum-resistant tokens pumped. Grayscale called the whole thing a red herring for 2026 valuations. Adam Back said the real threat is decades away. Everyone was a little bit right and mostly wrong, because almost nobody was asking the right question.</p>
+
+    <p>The right question is not <strong>when the quantum computer arrives</strong>. The right question is <strong>what exactly it breaks, and what can be done about the thing it breaks before it arrives</strong>. Those are different questions, and the answers reshape almost everything people currently believe about the quantum threat to cryptocurrency.</p>
+
+    <p>The short version: quantum computers probably will not devalue crypto through mining. They probably will not cause the kind of sudden apocalyptic failure that makes for good headlines. What they could do — if the people responsible for cryptocurrency governance fail to act during a window that is already open — is trigger a slow, structural crisis of confidence in the signature scheme that underwrites every major blockchain. And that crisis is not primarily a cryptography problem. It is a migration-politics problem dressed up as a cryptography problem.</p>
+
+    <p>This dispatch is about why.</p>
+  </div>
+
+  <!-- CHAPTER I -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter I</div>
+      <h2>What Actually <em>Changed</em></h2>
+
+      <p>To understand what the April whitepaper actually said, you need a handful of definitions that most news coverage skipped.</p>
+
+      <p>A <strong>CRQC</strong> — cryptographically relevant quantum computer — is a fault-tolerant quantum machine large enough and fast enough to run Shor's algorithm against the public-key cryptography that currently protects almost everything digital: web traffic, banking, military communications, and cryptocurrency wallets. No CRQC exists. The current state of the art is several steps removed from it. Google's Willow processor is 105 physical qubits. IBM's 2026 roadmap targets the Nighthawk processor at 360 qubits for client delivery, with the Kookaburra module serving as a demonstration of scaling architecture rather than a deployable machine. Microsoft and Atom Computing have shown early logical-qubit experiments on neutral-atom platforms. These are real advances. None of them are CRQCs. None of them are close.</p>
+
+      <p>A CRQC against Bitcoin's signature scheme would require, very roughly, somewhere between a few hundred thousand and a few million physical qubits, depending on architecture, error-correction overhead, and which specific attack you're trying to run. Before April 2026, published resource estimates for this kind of machine had been drifting downward from older papers that cited figures in the tens of millions. Then Google's team published a new analysis that took the lower bound for a fast-clock superconducting architecture below half a million.</p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="num">&lt;500<span style="font-size:0.5em">k</span></span>
+          <span class="desc">Physical qubits for a fast-clock<br>CRQC against secp256k1</span>
+        </div>
+        <div class="stat">
+          <span class="num">&lt;9<span style="font-size:0.5em">min</span></span>
+          <span class="desc">Attack window under favorable<br>mempool assumptions</span>
+        </div>
+        <div class="stat">
+          <span class="num">~20<span style="font-size:0.5em">×</span></span>
+          <span class="desc">Reduction from previous<br>published resource estimates</span>
+        </div>
+      </div>
+
+      <p>Those numbers come with important conditions. They assume a superconducting architecture with fast error-correction cycles, a particular surface-code implementation, and favorable assumptions about network propagation and mempool dynamics during the attack window. Change the assumptions and the numbers change. But even with maximally skeptical assumptions, the revised estimates are dramatically lower than the older ones, and the direction of travel in the research literature is consistent: resource requirements keep coming down as the algorithmic and architectural work improves.</p>
+
+      <p>This is the thing most coverage missed. The April whitepaper was not news about quantum hardware. <strong>The hardware did not get closer. The blueprints got shorter.</strong> Those are different kinds of news. A hardware announcement would move Q-Day — the day the first CRQC exists — nearer in time. A resource-estimate revision lowers the ceiling on how big and expensive the first CRQC has to be, which means it could arrive earlier and from more actors than previously thought, but it does not actually bring it here. Q-Day is still a function of hardware progress. What changed is how much hardware progress is required to get there.</p>
+
+      <p>For an audience trying to decide how seriously to take the quantum threat, this distinction matters enormously. A world in which resource estimates collapse but no new machines are announced is a world where the smart move is accelerated migration planning, not panic. It is also a world in which the people paying attention have slightly less time than they thought, and the people not paying attention have a lot less time than they think.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER II -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter II</div>
+      <h2>Not Encryption. <em>Not Mining.</em></h2>
+
+      <p>Here is where almost all public discussion of quantum computing and cryptocurrency goes wrong, and where this dispatch earns its keep if it earns it anywhere.</p>
+
+      <p>Bitcoin does not use encryption.</p>
+
+      <p>I realize this sounds like a pedantic distinction, but it is the single most important technical point in the whole quantum-crypto debate, and getting it wrong leads directly to a set of misconceptions that have shaped everything from news coverage to policy discussions to market reactions. So let me be precise about what Bitcoin actually does.</p>
+
+      <p>When you "own" a Bitcoin, what you actually own is a private key — a large random number — that corresponds mathematically to a public key via elliptic-curve operations on a specific curve called <em>secp256k1</em>. (Not NIST P-256, which is a different curve used for other things and which is often confused with Bitcoin's curve because both involve 256-bit arithmetic.) When you want to spend your Bitcoin, you use your private key to sign a transaction. Anyone can verify that signature using your public key. Nothing is hidden. Nothing is encrypted. Every Bitcoin transaction is visible to the entire world forever. The blockchain's security does not depend on secrecy. It depends on the assumption that nobody can derive your private key from your public key, which is the mathematical problem that Shor's algorithm solves.</p>
+
+      <p>The confidentiality of a Bitcoin transaction is zero. The authorization to spend is protected by a cryptographic proof of knowledge. These are different things. Quantum computers break the proof of knowledge. They do not "decrypt" anything, because nothing is encrypted.</p>
+
+      <div class="pullquote">
+        Quantum computers don't break Bitcoin's encryption, because Bitcoin has no encryption. They don't break its mining, because mining isn't what quantum computers do well. They break the signatures — the thing nobody in the headlines is naming.
+        <cite>— The pivot</cite>
+      </div>
+
+      <p>Which brings us to the second misconception, the one about mining.</p>
+
+      <p>Bitcoin's proof-of-work system uses the SHA-256 hash function. Miners compete to find inputs that produce hash outputs below a certain target value. The security of this system depends on hashing being computationally expensive and on no one party controlling more than half the network's total hash rate. A lot of coverage suggests that quantum computers threaten this system because Grover's algorithm offers a quadratic speedup for searching hash preimages. On paper, that means a quantum computer could mine Bitcoin faster than a classical computer by roughly a factor of the square root of the search space.</p>
+
+      <p>In practice, this is not going to happen, and the Google whitepaper is explicit about why.</p>
+
+      <p>First, "quadratic speedup" sounds dramatic but is actually modest compared to the <em>exponential</em> speedup that Shor's algorithm gives against signatures. A quadratic improvement against a 256-bit hash still leaves you with an enormous amount of work to do — roughly equivalent to a 128-bit search, which is still astronomically hard. Second, that theoretical speedup has to be purchased at the cost of running a fault-tolerant quantum computer, which has its own physical-resource overheads that dwarf the efficiency gain in any realistic architecture. ASIC miners running at room temperature, optimized over a decade for exactly one task, are going to beat quantum hardware at SHA-256 for any timeline we can currently imagine.</p>
+
+      <p>Third, and most importantly: if SHA-256 ever did become genuinely threatened by quantum attacks, the fix is easy. You double the hash length. SHA-512 is already standardized and widely implemented. Bumping Bitcoin's proof-of-work hash to a larger output size is a protocol change, but it's not a mathematically difficult one. You cannot "double your way out" of a broken signature scheme — you need a completely new mathematical foundation, built on different hard problems, with different algorithmic assumptions. Signature migration is cryptographically traumatic. Hash migration is annoying.</p>
+
+      <p>This is why the Google whitepaper explicitly argues that quantum attacks on proof-of-work are not a credible near-term threat. The real vulnerability, the one that matters, is the signature scheme. Mining is a distraction.</p>
+
+      <p>The implication is that cryptocurrency is not going to be devalued by quantum inflation. The scenario where a quantum miner suddenly produces ten thousand Bitcoin per day and crashes the supply curve is not going to happen, not in 2026, not in 2036, and probably not ever. <em>If cryptocurrency dies, it will not die from mining.</em> It will die, if it dies at all, from what happens to the signatures.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER III -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter III</div>
+      <h2>The Three Attack <em>Vectors</em></h2>
+
+      <p>The Google whitepaper's most useful contribution is not the lower qubit count. It is a taxonomy — a structured way of thinking about how a CRQC would actually be used against a cryptocurrency network. The paper distinguishes three attack categories, and the distinction matters because they have very different timelines, very different mitigations, and very different implications for what happens next.</p>
+
+      <h3>On-spend attacks: the mempool race</h3>
+
+      <p>This is the attack scenario that makes headlines, and it goes like this. You want to send Bitcoin from one address to another. You construct a transaction, sign it with your private key, and broadcast it to the network. Your transaction enters the mempool — the queue of pending transactions waiting to be included in the next block. At this moment, and for the first time, your public key becomes visible on the network. Until your transaction is confirmed in a block, anyone watching the mempool can see it.</p>
+
+      <p>An attacker with a sufficiently fast CRQC could, in principle, take your public key from the mempool, run Shor's algorithm to derive your private key, construct a new transaction sending your coins to an attacker-controlled address, attach a higher fee, and broadcast it. If their transaction gets included in a block before yours does, they have stolen your coins in flight.</p>
+
+      <p>This is the scenario that the April whitepaper's "under nine minutes" figure is pointing at. It requires a fast-clock architecture — superconducting or silicon spin qubits, where error-correction cycles are measured in microseconds — because the attack window is bounded by the block time. On Bitcoin, that window averages ten minutes, which is why nine minutes is the relevant threshold. On faster chains like Ethereum, the window is much shorter and the attack is correspondingly harder.</p>
+
+      <p>The on-spend scenario is the most dramatic, but it is also the one with the clearest mitigation. If Bitcoin's protocol were changed to never expose the public key until <em>after</em> a transaction is confirmed — using techniques like Taproot, which already hashes public keys into addresses — the mempool-race attack becomes much harder. Bitcoin is already partway through this transition. The on-spend threat is real, but the community has a technical answer for it.</p>
+
+      <h3>At-rest attacks: the dormant wallet problem</h3>
+
+      <p>This is the one that should actually worry people.</p>
+
+      <p>An attacker with a slower quantum computer — days or weeks of runtime, not minutes — goes after coins whose public keys are <em>already visible on the blockchain</em> and have been for years. There is no mempool race. There is no deadline. The attacker has all the time in the world, because the target is not moving.</p>
+
+      <p>The scale of this exposure is larger than most people realize, and the Google whitepaper is careful about the definitions. Roughly 1.7 million Bitcoin are secured by legacy Pay-to-Public-Key (P2PK) scripts from Bitcoin's early years, in which the public key is directly written into the blockchain as part of the locking script. These are mostly coins from before 2012, when the more common Pay-to-Public-Key-Hash format took over. A significant fraction of them belong to Satoshi Nakamoto, whose mining activity in 2009 and 2010 produced roughly a million Bitcoin that have never moved.</p>
+
+      <p>Beyond P2PK, there is a larger category of coins in addresses that have been <em>reused after spending</em>. When you spend from a standard Bitcoin address for the first time, your public key gets revealed in the transaction that authorizes the spend. If you then receive more coins to that same address, those new coins are protected only by a public key that is already visible on-chain. Good wallet practice says never reuse addresses, but historical usage has been sloppy, and the cumulative exposure is significant. Different analyses of what counts as "vulnerable" yield different numbers — the Google whitepaper's broad estimate is around 6.7 million BTC in addresses at some level of exposure, with a narrower dormant-quantum-vulnerable subset of roughly 2.3 million BTC depending on how you count.</p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="num">~1.7<span style="font-size:0.5em">M</span></span>
+          <span class="desc">BTC in legacy P2PK scripts<br>with directly-visible public keys</span>
+        </div>
+        <div class="stat">
+          <span class="num">~2.3<span style="font-size:0.5em">M</span></span>
+          <span class="desc">BTC in the dormant<br>quantum-vulnerable subset</span>
+        </div>
+        <div class="stat">
+          <span class="num">~6.7<span style="font-size:0.5em">M</span></span>
+          <span class="desc">BTC in addresses vulnerable<br>through exposure or reuse</span>
+        </div>
+      </div>
+
+      <p>The at-rest attack is the one where "harvest now, decrypt later" stops being a metaphor. An attacker does not need a CRQC today. They need a CRQC eventually, and they need the dormant coins to still be sitting there when the CRQC arrives. The vulnerable public keys are already recorded on the blockchain. They will be recorded on the blockchain forever, because that's what a blockchain is. The harvesting has already happened. The decryption is just a matter of waiting.</p>
+
+      <p>And here is the thing the on-spend discussion misses entirely: <strong>at-rest attacks have no clean mitigation.</strong> You can protect people who are paying attention — tell them to move their coins to quantum-safe addresses before the CRQC arrives. You cannot protect people who are not paying attention, because cryptocurrency's whole model depends on individuals being responsible for their own keys. Dead wallet holders will not respond to migration announcements. Lost-key holders cannot respond. Satoshi Nakamoto, whoever they were, has not touched their coins in fifteen years and shows no sign of starting now. You cannot upgrade the security of a wallet whose owner isn't there.</p>
+
+      <h3>On-setup attacks: the exotic third category</h3>
+
+      <p>The Google whitepaper names a third category that gets less attention: on-setup attacks, where a one-time quantum computation compromises a shared cryptographic parameter in a protocol, with consequences that cascade across every user of that protocol. On-setup attacks are less immediately relevant to Bitcoin — which does not have the kind of shared parameters that are most vulnerable to this category — but they are relevant to other cryptographic systems, and they illustrate a broader principle: "just upgrade the protocol" is not always a clean answer, because some protocols have structural features that make them harder to migrate than others.</p>
+
+      <p>I mention this category mainly to note that the threat landscape is more varied than the simple "break the private key" mental model suggests. Different cryptocurrencies have different exposure profiles. Different protocol decisions made years ago create different migration difficulties now. The quantum threat is not a single binary switch. It is a distribution of risks across a complex landscape of designs, and the actors in each corner of that landscape will face different versions of the problem.</p>
+
+      <h3>The Oratomic paper, correctly framed</h3>
+
+      <p>A second piece of research released in March 2026 by researchers affiliated with Caltech and the startup Oratomic deserves mention here, because it has been widely misreported. The Oratomic preprint describes architectures using roughly 10,000 to 26,000 reconfigurable neutral-atom qubits that could, in principle, run Shor's algorithm at cryptographic scales. Coverage has treated this as a cheaper, faster, more imminent version of the Google threat. It is not.</p>
+
+      <p>Oratomic's architecture is a <em>slow-clock</em> platform. Neutral-atom quantum computers have error-correction cycles measured in milliseconds rather than microseconds, which means the wall-clock runtime for a Shor attack would be on the order of days rather than minutes. Fewer qubits, but slower execution. This is not a more dangerous mempool-race threat. It is a <em>different threat profile</em>, one that points naturally toward at-rest attacks — because when you have days to run your attack, you don't need to race a block time. You just need a target that will still be there when you finish.</p>
+
+      <p>Two different papers. Two different attack vectors. Both pointing at the same structural vulnerability from different directions. The on-spend attack gets the headlines. The at-rest attack is the one that is going to matter.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER IV -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter IV</div>
+      <h2>The 6.7 Million Coin <em>Question</em></h2>
+
+      <p>Roughly a third of all Bitcoin ever mined is sitting in addresses that would be vulnerable to a sufficiently capable quantum computer running an at-rest attack. Some of those coins belong to people who are actively managing their holdings and can migrate to quantum-safe addresses when the time comes. Many of them do not.</p>
+
+      <p>A significant fraction belongs to people who have lost their private keys, whose hardware wallets have failed, whose paper backups have been destroyed, who died without sharing their credentials, or who have simply stopped following cryptocurrency news and will never see the migration announcements. A meaningful chunk belongs to Satoshi Nakamoto, whose roughly one million Bitcoin have not moved since 2010 and may never move again. Some of those dormant coins were lost five minutes after they were mined. Some were lost last year. Nobody knows which.</p>
+
+      <p>Here is the question nobody in the cryptocurrency world wants to answer in public: <strong>what should happen to those coins?</strong></p>
+
+      <p>There are three answers on offer, and none of them are good.</p>
+
+      <p>The first answer is that the coins belong to whoever can take them. This is the cypherpunk-purist position, and it has a certain internal consistency. The network's rules are its rules. If a technological advance allows someone to derive a private key from a public key, that's what the math says, and Bitcoin was never about protecting people from the consequences of their own key-management failures. <em>Not your keys, not your coins.</em> If a quantum attacker can take Satoshi's million Bitcoin, those coins belong to the quantum attacker now. Welcome to the future.</p>
+
+      <p>This position is philosophically clean and practically catastrophic. The sudden release of millions of Bitcoin into circulation by an attacker with no stake in the long-term health of the network would crash the market, destroy confidence in the security model of every cryptocurrency using similar signature schemes, and possibly end Bitcoin as a going concern. It would also transfer enormous wealth to whoever got the quantum computer first, which is a concentration of power that the cryptocurrency community was explicitly founded to prevent. The cypherpunk-purist answer is the answer that ends cryptocurrency.</p>
+
+      <p>The second answer is that the network should <em>freeze</em> quantum-vulnerable addresses before the CRQC arrives — protect the dormant holders from theft by making their coins unspendable through a protocol change. This is the protective position. It has the advantage of preserving the supply cap and preventing attacker enrichment. It has the disadvantage of raising impossible questions about who decides which addresses to freeze, on what authority, with what recourse. What if someone wakes up in 2031 to discover that their inheritance has been administratively locked because a committee of developers decided their address was at risk? What if Satoshi returns? What about the addresses whose status is ambiguous — where it is unclear whether the owner is inactive or merely patient? Every decision to freeze is a decision about someone else's property, made without their consent, by actors whose authority to make that decision is contested by definition.</p>
+
+      <p>The third answer, which is genuinely being discussed in Bitcoin developer forums and which sounds radical until you think about it, is that dormant quantum-vulnerable coins should be <em>burned</em> — destroyed — before they can be stolen. Any coin that has not moved within some defined window, and which sits in a quantum-vulnerable address format, would be marked as unspendable through a protocol upgrade. The coins would not be transferred to anyone. They would simply cease to exist in the spendable supply.</p>
+
+      <p>This sounds extreme, but it has a logic the other options lack. If vulnerable coins can be taken, they will enter circulation and dilute the value of all other holdings. If they are frozen, they hang over the market indefinitely as a potential reanimation risk. If they are burned, Bitcoin's effective supply becomes slightly smaller and the economic harm is distributed across every holder through a minor deflationary adjustment, rather than concentrated in a windfall for whoever got the quantum computer first. The burn option trades a small loss distributed across many holders for the avoidance of a large loss concentrated among a few attackers. It is, in its own dark way, the most equitable of the three options.</p>
+
+      <p>It is also unthinkable in the current cryptocurrency culture. Burning Satoshi's coins would be burning the single most symbolically important holding in the entire ecosystem. It would require the cryptocurrency community to collectively agree that some coins, once lost, are <em>gone</em> — and that the community has the authority to formalize that gone-ness. This is the opposite of what Bitcoin was built to do. It is also, possibly, the only way Bitcoin survives contact with a CRQC.</p>
+
+      <div class="callout">
+        <span class="tag">◆ The deeper question</span>
+        <p>None of the three options are good. All of them are going to be fought about, bitterly, by people who currently hold no formal authority and cannot be compelled to agree. And the fight is going to happen before the quantum computer arrives — because waiting until after means the question has been answered by whoever moved first.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament"><div class="diamond"></div></div>
+
+  <!-- CHAPTER V -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter V</div>
+      <h2>The Signature-Size <em>Shock</em></h2>
+
+      <p>Suppose the cryptocurrency community resolves the dormant-coin question — somehow, against all odds, through some combination of burning, freezing, and accepting losses. The remaining task is to migrate the active part of the system to signatures that a quantum computer cannot break. This is the part where everyone says "post-quantum cryptography is the solution" and then stops talking, because the alternative is explaining how the solution actually works.</p>
+
+      <p>The good news is that the cryptographic work has already been done. The National Institute of Standards and Technology finalized a set of post-quantum standards in August 2024: ML-KEM for key establishment (based on lattice problems), ML-DSA for signatures (also lattice-based), and SLH-DSA for signatures (based on hash functions, with different trade-offs). The math is reviewed. Reference implementations exist. You can download them today. The cryptographic solution to the quantum threat is, in a purely technical sense, solved.</p>
+
+      <p>The bad news is that the post-quantum signatures are enormous.</p>
+
+      <p>A typical ECDSA signature on Bitcoin's secp256k1 curve is about 71 bytes. An ML-DSA signature — the mainline post-quantum standard — is 2,420 bytes at the lowest security parameter set, 3,309 bytes at the middle, and 4,627 bytes at the highest. That is an increase of roughly thirty-five to sixty-five times. Per signature. On a blockchain where block space is a scarce resource sold by auction, where transaction fees are directly proportional to the amount of data you take up, where propagation bandwidth is a consensus-health concern, and where every full node has to store every signature forever.</p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="num">71<span style="font-size:0.5em">B</span></span>
+          <span class="desc">Typical ECDSA signature<br>on Bitcoin's secp256k1</span>
+        </div>
+        <div class="stat">
+          <span class="num">2.4<span style="font-size:0.5em">KB</span></span>
+          <span class="desc">ML-DSA signature at the<br>lowest parameter set</span>
+        </div>
+        <div class="stat">
+          <span class="num">~35×</span>
+          <span class="desc">Minimum signature-size increase<br>in a post-quantum migration</span>
+        </div>
+      </div>
+
+      <p>This is not a technical footnote. This is the entire migration story.</p>
+
+      <p>"Bitcoin should move to post-quantum signatures" is the kind of sentence that sounds easy until you realize it means one of the following, each of which is politically radioactive in cryptocurrency governance:</p>
+
+      <p>You could <strong>raise the block size</strong> to accommodate the larger signatures, which Bitcoin has spent its entire history refusing to do. The block-size wars of 2015–2017 split the community, produced a hard fork, and left scars that still shape every protocol-level discussion. Proposing a block-size increase to solve the quantum migration is proposing to refight the most bitter political battle in Bitcoin's history, on a faster timeline, under duress.</p>
+
+      <p>You could <strong>keep the block size</strong> and accept that transaction throughput drops by a factor of thirty-five to sixty-five. Bitcoin already struggles with throughput. A post-quantum migration without block-size expansion would reduce the effective transaction capacity of the network to a small fraction of current levels, making on-chain transactions economically viable only for large transfers and pushing everyday use entirely to layer-two solutions that have their own security and adoption issues.</p>
+
+      <p>You could <strong>develop signature-aggregation schemes</strong> that compress multiple post-quantum signatures into a single smaller proof, recovering some of the space efficiency. This is an active research area, and it is promising, but aggregation schemes add implementation complexity, introduce new attack surfaces, and usually come with trade-offs in verification cost or security assumptions. They are not a free lunch. They may be part of the answer, but they are not the whole answer.</p>
+
+      <p>You could <strong>create a hybrid format</strong> that uses ECDSA signatures until quantum risk becomes imminent, and then switches to post-quantum signatures through a protocol upgrade. This is the most politically plausible path, but it is also a deferred decision — it means the hard migration happens on a timeline determined by quantum progress rather than by community planning, and it requires agreement on when "imminent" is, which will itself be contested.</p>
+
+      <p>Every one of these options requires coordinated action across a decentralized network that has historically been unable to coordinate on anything except not coordinating. The cryptographic problem has a solution. The governance problem does not, or at least does not yet.</p>
+
+      <p>This is where the dispatch's central claim comes into focus. The quantum threat to cryptocurrency is not primarily a cryptography problem, because the cryptography is already solved. It is a governance problem, because the migration requires decisions that the governance structures were never designed to make. <em>The question is not whether Bitcoin can defend against quantum attacks. The question is whether Bitcoin's governance can make the decisions required to defend against them, before it has to.</em></p>
+
+      <p>That is a very different kind of question from "when does the quantum computer arrive." It is also a question with a very different answer.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER VI -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter VI</div>
+      <h2>So Will Quantum <em>Devalue Crypto?</em></h2>
+
+      <p>Now the direct answer to the question this dispatch set out to address.</p>
+
+      <p>Will quantum computing devalue cryptocurrency?</p>
+
+      <p>The answer splits cleanly along the two mechanisms people usually have in mind, and they have very different resolutions.</p>
+
+      <h3>Through mining? No.</h3>
+
+      <p>The scenario where a quantum computer becomes a super-efficient miner, produces new Bitcoin at a rate that crashes the supply curve, and inflates the currency into worthlessness is the scenario most general-audience coverage imagines. It is also the least likely of the plausible failure modes. Grover's algorithm does not give the kind of speedup that would make quantum mining competitive with ASICs at any timeline we can currently model. Hash functions can be reinforced cheaply if they ever become genuinely threatened. Proof-of-work has structural defenses against quantum attacks that signature schemes do not have. If cryptocurrency is going to die, it will not die from mining. This is the threat scenario that gets the headlines and the one readers can mostly set aside.</p>
+
+      <h3>Through signature compromise? It depends — and the dependency is governance, not physics.</h3>
+
+      <p>This is where the real risk lives, and it is not a binary outcome. There is a scenario in which quantum computing causes a serious shock to cryptocurrency's value, and there is a scenario in which the migration succeeds and the whole thing becomes a footnote in the history of the technology. Which scenario we end up in depends on decisions being made right now, by people most holders cannot name, in forums most holders do not read.</p>
+
+      <p>The shock scenario looks like this. A CRQC arrives — call it 2029, 2032, 2035, the exact year does not matter. Before the migration has completed, a large at-rest theft occurs against dormant coins. Maybe it is Satoshi's wallet, because of the symbolic value. Maybe it is a subset of P2PK coins that can be taken quietly without attracting immediate attention. The exact target does not matter much. What matters is that the market discovers an unknown fraction of circulating supply is now in attacker hands and may be dumped at any moment, and that the security assumptions of every cryptocurrency using elliptic-curve signatures are now provably broken. Confidence collapses across the entire space simultaneously. The migration, already politically difficult, becomes a panic-driven scramble across every affected chain at once, with the worst possible conditions for the kind of careful coordination that migration actually requires.</p>
+
+      <p>The damage in this scenario is not primarily to the cryptographic math. It is to the social consensus that backs cryptocurrency's value. Crypto's market cap is a belief, not a number, and beliefs can be broken faster than blockchains can be forked. The devaluation comes not from coins being directly stolen — though some would be — but from everyone else rushing for the exits at once, while the protocol upgrades that would restore confidence are still being argued about in developer forums.</p>
+
+      <p>The other scenario looks like this. Between now and whenever the CRQC arrives, the major blockchain communities use the time to build, test, and deploy post-quantum migration frameworks. Hybrid signature schemes are standardized. Dormant-coin policies are negotiated, imperfectly and painfully but negotiated. Wallet software is upgraded. Users are educated. By the time the CRQC becomes a credible threat, the migration is far enough along that an attacker cannot produce a confidence-crashing event, and the system transitions into its post-quantum form with relatively little damage. The devaluation scenario becomes the counterfactual, the disaster that didn't happen, mentioned in passing in future dispatches about the history of cryptocurrency.</p>
+
+      <p>The gap between these two scenarios is not technical. It is entirely about whether the work gets done in time. The cryptographic tools exist. The warning has been given. The resource estimates have collapsed. What remains is a question about whether the governance structures of decentralized networks can make hard decisions on a deadline set by physics.</p>
+
+      <p>I am not optimistic, but I am not pessimistic either. The right posture is <em>alert</em>. The window for migration is probably wide enough — 2026 to 2029, maybe 2030 — but it is not infinite, and every month of continued delay narrows it. Google has set its own internal post-quantum migration target at 2029, which creates pressure on every other actor in the ecosystem to move on a similar timeline. The forcing functions exist. Whether they are strong enough to overcome cryptocurrency's institutional inertia is the question this dispatch cannot answer, because nobody can answer it yet.</p>
+    </div>
+  </section>
+
+  <!-- CODA -->
+  <div class="coda">
+    <div class="container">
+      <p class="coda-text">The quantum threat to cryptocurrency is not a machine that appears one morning and drains every wallet at once. It is slower and stranger than that. It is a slow-motion governance test, played out in papers and proposals and fee-market fights, against a clock <em>nobody can see clearly</em>.</p>
+      <p class="coda-sig">◆ End of dispatch</p>
+    </div>
+  </div>
+
+  <!-- POSTSCRIPT -->
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Postscript — The Echo</div>
+
+      <p>Regular readers will notice that this dispatch rhymes with the previous one. <a href="ugarit-warning.html" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--line-strong);">The Ugarit Warning</a> argued that complex systems fail not when a single shock arrives but when a coupled shock encounters a system whose buffers have already thinned, and that the window for building those buffers is always shorter than the people inside the system believe. The quantum threat to cryptocurrency is the same structural story in a different domain. The shock is visible on the horizon. The resource estimates are collapsing. The governance structures required to respond are known to be inadequate. The people paying attention are calibrating for 2029. The people not paying attention will be caught unprepared. The only question is which group turns out to be larger.</p>
+
+      <p>This is not a prediction that cryptocurrency will collapse. It probably won't. Markets are resilient, developers are capable, and the migration tools exist. The most likely outcome is the boring one: some damage, some losses, some bitter fights, and a successful transition that future historians describe as "surprisingly smooth given the circumstances." That is the scenario the Bronze Age analogy would call <em>managed adaptation</em>, and it remains available.</p>
+
+      <p>But the Bronze Age analogy would also note that the scribes at Ugarit were not stupid. They were doing their jobs. They filed the grain receipts. They answered the correspondence. They handled this week's problem with this week's tools. And the system that paid them was gone before they understood it was going.</p>
+
+      <p><strong>Complex systems don't fail when the threat arrives. They fail when the threat arrives before the migration.</strong></p>
+
+      <p>The quantum computer has not arrived. The migration has not happened. The space between those two facts is where the next several years of cryptocurrency's history are going to be written, and the writing is being done right now, by the people who are and aren't attending to it.</p>
+    </div>
+  </section>
+
+</article>
+
+<!-- Return to archive -->
+<a href="index.html" class="return-link">← Return to the archive</a>
+
+<footer>
+  <p>Fieldnotes <span style="display:inline-block;width:6px;height:6px;background:var(--amber);transform:rotate(45deg);margin:0 12px;vertical-align:middle;"></span> №03 — The Signature Problem <span style="display:inline-block;width:6px;height:6px;background:var(--amber);transform:rotate(45deg);margin:0 12px;vertical-align:middle;"></span> April 2026</p>
+</footer>
+
+</body>
+</html>
