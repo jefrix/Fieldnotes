@@ -1,0 +1,23 @@
+# Fieldnotes — robots.txt
+# https://jefrix.github.io/Fieldnotes/
+
+User-agent: *
+Allow: /
+
+# AI crawlers are welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://jefrix.github.io/Fieldnotes/sitemap.xml
