@@ -7,7 +7,7 @@
   <!-- Landing page / archive -->
   <url>
     <loc>https://jefrix.github.io/Fieldnotes/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -192,6 +192,14 @@
   <url>
     <loc>https://jefrix.github.io/Fieldnotes/The-Sovereign-Bid.html</loc>
     <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dispatch №24 — The Client's Doctrine -->
+  <url>
+    <loc>https://jefrix.github.io/Fieldnotes/The-Clients-Doctrine.html</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
