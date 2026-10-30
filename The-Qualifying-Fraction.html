@@ -1,348 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Qualifying Fraction — Fieldnotes №27</title>
 
-<meta name="description" content="Two events, twelve days apart: a Binance hot-wallet authorisation and China's 0.1% rare-earth rule. Both are chokepoints where the thing controlled is not a volume. It is a test.">
-<meta name="author" content="Fieldnotes">
-<meta name="theme-color" content="#e7e9e4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#10171b" media="(prefers-color-scheme: dark)">
+<!-- Basic metadata -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Qualifying Fraction | Fieldnotes №27</title>
+<meta name="description" content="Two events, twelve days apart: a Binance hot-wallet authorisation and China&#x27;s 0.1% rare-earth rule. Both are chokepoints where the thing controlled is not a volume. It is a test.">
+
+<!-- Authorship and categorization -->
+<meta name="author" content="Jeff Ricks">
+<meta name="publisher" content="Fieldnotes">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta http-equiv="Content-Language" content="en-US">
+
+<!-- Article tags -->
+<meta name="article:section" content="Geopolitics, Energy, and Systems">
+<meta name="article:tag" content="Volume Three">
+
+<!-- Canonical URL -->
 <link rel="canonical" href="https://jefrix.github.io/Fieldnotes/The-Qualifying-Fraction.html">
+
+<!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+<!-- Open Graph -->
 <meta property="og:type" content="article">
+<meta property="og:site_name" content="Fieldnotes">
 <meta property="og:title" content="The Qualifying Fraction — Fieldnotes №27">
 <meta property="og:description" content="Binance and the 0.1% rare-earth rule: when the chokepoint is a predicate, not a place.">
-<meta property="og:site_name" content="Fieldnotes">
 <meta property="og:url" content="https://jefrix.github.io/Fieldnotes/The-Qualifying-Fraction.html">
 <meta property="article:published_time" content="2026-10-29">
+<meta property="article:author" content="Jeff Ricks">
+<meta property="article:section" content="Geopolitics, Energy, and Systems">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Qualifying Fraction — Fieldnotes №27">
 <meta name="twitter:description" content="Binance and the 0.1% rare-earth rule: when the chokepoint is a predicate, not a place.">
 
+<!-- Fonts and stylesheet -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dispatch.css">
 
-<style>
-  :root{
-    --paper:#e7e9e4;
-    --ink:#17222a;
-    --ink-soft:#54615f;
-    --rule:#c4c9c1;
-    --rule-fine:#d5d9d2;
-    --signal:#9e2b20;
-    --patina:#35655c;
-    --measure:34rem;
-    --serif:"Spectral", "Iowan Old Style", Palatino, Georgia, serif;
-    --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --paper:#10171b;
-      --ink:#dde3de;
-      --ink-soft:#93a09c;
-      --rule:#2c383d;
-      --rule-fine:#212c31;
-      --signal:#d9705f;
-      --patina:#6fa89c;
-    }
-  }
-
-  *,*::before,*::after{box-sizing:border-box}
-
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--serif);
-    font-weight:300;
-    font-size:1.075rem;
-    line-height:1.7;
-    font-kerning:normal;
-    text-rendering:optimizeLegibility;
-  }
-
-  .sheet{
-    max-width:var(--measure);
-    margin:0 auto;
-    padding:2.5rem 1.4rem 5rem;
-  }
-
-  a{color:inherit;text-decoration-color:var(--signal);text-underline-offset:.18em}
-  a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
-
-  /* ---- masthead ---- */
-  .masthead{
-    font-family:var(--sans);
-    font-size:.66rem;
-    font-weight:500;
-    letter-spacing:.11em;
-    color:var(--ink-soft);
-    line-height:1.5;
-    padding-bottom:1.6rem;
-    border-bottom:1px solid var(--rule);
-  }
-  .masthead .diamond{color:var(--signal)}
-
-  /* ---- title block ---- */
-  .title{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:clamp(2.4rem,10vw,3.5rem);
-    line-height:1.02;
-    letter-spacing:-.022em;
-    margin:2.2rem 0 0;
-  }
-  .byline{
-    font-family:var(--sans);
-    font-size:.78rem;
-    font-weight:400;
-    color:var(--ink-soft);
-    margin:.9rem 0 0;
-  }
-
-  /* ---- the log: readings for the dispatch ---- */
-  .log{
-    margin:2.6rem 0 3rem;
-    border-top:2px solid var(--ink);
-    border-bottom:1px solid var(--rule);
-  }
-  .log dl{
-    margin:0;
-    display:grid;
-    grid-template-columns:1fr auto;
-    column-gap:1rem;
-  }
-  .log dt,.log dd{
-    margin:0;
-    padding:.62rem 0;
-    border-bottom:1px solid var(--rule-fine);
-    font-family:var(--sans);
-    font-size:.82rem;
-    line-height:1.35;
-  }
-  .log dt{color:var(--ink-soft)}
-  .log dd{
-    text-align:right;
-    font-weight:600;
-    font-variant-numeric:tabular-nums;
-  }
-  .log dd .prior{
-    display:block;
-    font-weight:400;
-    font-size:.72rem;
-    color:var(--ink-soft);
-  }
-  .log dt:last-of-type,.log dd:last-of-type{border-bottom:0}
-
-  /* ---- body ---- */
-  p{margin:0 0 1.35em}
-  .lede{font-size:1.16rem;line-height:1.62}
-
-  h2{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:1.42rem;
-    line-height:1.22;
-    letter-spacing:-.012em;
-    margin:3.4rem 0 1.3rem;
-    padding-top:1.5rem;
-    border-top:1px solid var(--rule);
-  }
-  h2 .numeral{
-    display:block;
-    font-family:var(--sans);
-    font-size:.72rem;
-    font-weight:600;
-    letter-spacing:.14em;
-    color:var(--signal);
-    margin-bottom:.5rem;
-  }
-  /* an unnumbered section keeps the same vertical rhythm as a numbered one */
-  h2.unnumbered{padding-top:2.72rem}
-
-  .channel{
-    font-family:var(--sans);
-    font-weight:600;
-    font-size:.94em;
-    color:var(--patina);
-  }
-
-  /* ---- scored or falsifiable claims: a ledger, not a list ---- */
-  .claims{
-    margin:1.8rem 0 2rem;
-    padding:0;
-    list-style:none;
-    counter-reset:claim;
-    border-top:1px solid var(--rule);
-  }
-  .claims li{
-    counter-increment:claim;
-    padding:1.05rem 0 1.05rem 2.6rem;
-    border-bottom:1px solid var(--rule-fine);
-    position:relative;
-  }
-  .claims li::before{
-    content:counter(claim);
-    position:absolute;
-    left:0;
-    top:1.15rem;
-    font-family:var(--sans);
-    font-size:.78rem;
-    font-weight:600;
-    color:var(--signal);
-    font-variant-numeric:tabular-nums;
-  }
-  .claims li:last-child{border-bottom:0}
-
-  .colophon{
-    margin-top:3.6rem;
-    padding-top:1.5rem;
-    border-top:2px solid var(--ink);
-    font-family:var(--sans);
-    font-size:.78rem;
-    line-height:1.6;
-    color:var(--ink-soft);
-  }
-  .colophon p{margin:0 0 .6em}
-  .colophon .filed{color:var(--ink)}
-
-  @media (min-width:40rem){
-    .sheet{padding:4rem 2rem 6rem}
-    body{font-size:1.115rem}
-  }
-
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  }
-
-  @media print{
-    :root{--paper:#fff;--ink:#000;--ink-soft:#444;--rule:#000;--rule-fine:#bbb;--signal:#000;--patina:#000}
-    body{font-size:11pt}
-    .sheet{max-width:none;padding:0}
-    h2{page-break-after:avoid}
-    p{orphans:3;widows:3}
-  }
-
-</style>
 </head>
 <body>
-<article class="sheet">
 
-  <header>
-    <p class="masthead"><span class="diamond">◆</span> <a href="index.html">FIELDNOTES</a> / GEOPOLITICS · ENERGY · SYSTEMS — OCTOBER 2026</p>
+<!-- ========== HERO ========== -->
+<header class="hero hero-dispatch">
+  <div class="masthead">
+    <span class="mark">◆ <a href="index.html">FIELDNOTES</a> / GEOPOLITICS, ENERGY &amp; SYSTEMS</span>
+    <span>№27 — OCTOBER 2026</span>
+  </div>
 
-    <h1 class="title">The Qualifying Fraction</h1>
-    <p class="byline">Dispatch №27 · Volume Three · Filed 29 October 2026</p>
+  <div class="hero-content">
+    <div class="eyebrow">Volume Three continues — seventh of the series</div>
+    <h1 class="title">The Qualifying<br><em>Fraction</em></h1>
+    <p class="subtitle">Two events, twelve days apart: a Binance hot-wallet authorisation and China&#x27;s 0.1% rare-earth rule. Both are chokepoints where the thing controlled is not a volume. It is a test.</p>
 
-    <section class="log" aria-label="Readings for the dispatch">
-      <dl>
-        <dt>Binance outflows, 29 October</dt>
-        <dd>$2–5.8bn<span class="prior">no figure confirmed</span></dd>
+    <div class="meta-row">
+      <div>
+        <span class="label">Published</span>
+        <span class="value amber">October 29, 2026</span>
+      </div>
+      <div>
+        <span class="label">Reading time</span>
+        <span class="value">~10 minutes</span>
+      </div>
+      <div>
+        <span class="label">Filed under</span>
+        <span class="value">Geopolitics / Energy / Systems</span>
+      </div>
+      <div>
+        <span class="label">Part of</span>
+        <span class="value">Volume Three</span>
+      </div>
+    </div>
+  </div>
+</header>
 
-        <dt>Moved in one transaction</dt>
-        <dd>167,464 ETH<span class="prior">plus 63 token types</span></dd>
+<!-- ========== ARTICLE ========== -->
+<article>
 
-        <dt>Frozen by Tether and Circle</dt>
-        <dd>~$2.3bn<span class="prior">two private decisions, within hours</span></dd>
+  <!-- LEDE -->
+  <div class="container lede">
+    <p>Two events, twelve days apart, with nothing obviously in common.</p>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="num">$2–5.8bn</span>
+        <span class="desc">Binance outflows, 29 October</span>
+      </div>
+      <div class="stat">
+        <span class="num">167,464 ETH</span>
+        <span class="desc">Moved in one transaction</span>
+      </div>
+      <div class="stat">
+        <span class="num">~$2.3bn</span>
+        <span class="desc">Frozen by Tether and Circle</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="num">0.1%</span>
+        <span class="desc">Chinese content triggering a licence</span>
+      </div>
+      <div class="stat">
+        <span class="num">10 Nov</span>
+        <span class="desc">MOFCOM No. 70 expires</span>
+      </div>
+    </div>
+    <p>On October 29, on-chain analysts and the security firm Blockaid reported that several billion dollars had left Binance hot wallets (the exchange wallets kept online so customers can withdraw quickly) in a burst of transfers. Public tallies still disagree; figures in circulation run from roughly $2 billion to about $5.8 billion. Binance has said it is investigating a potential security issue while insisting user funds are safe; it has confirmed neither a final loss nor a breach of the kind the word usually implies. If the upper tallies hold, the sum would be more than triple the roughly $1.5 billion taken from Bybit in February 2025.</p>
+    <p>On November 10, China&#x27;s suspended rare-earth export controls either resume or get renegotiated. Rare earths are a set of metals used in tiny quantities inside permanent magnets, electric motors, wind turbines, phones, and a great many weapons systems. The October 2025 package that includes the so-called 0.1% rule is paused, not repealed. The pause notice runs out on the tenth.</p>
+    <p>One is a private security failure in a digital system; the other is a state licensing regime on physical material.</p>
+    <p>A chokepoint, in the sense this series uses, is a narrow place that a great deal of something has to pass through, so that whoever sits on the narrow place acquires leverage. Usually that something is a volume: oil through a strait, cargo through a canal, refining concentrated in one country. Here the controlled object is of a different kind. In both cases, the thing being controlled is not a volume. It is a test.</p>
+  </div>
 
-        <dt>Chinese content triggering a licence</dt>
-        <dd>0.1%<span class="prior">by value of the finished item</span></dd>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter I</div>
+      <h2>What Actually Moved the <em>Money</em></h2>
 
-        <dt>MOFCOM No. 70 expires</dt>
-        <dd>10 Nov<span class="prior">Beijing says 10 January</span></dd>
-      </dl>
-    </section>
-  </header>
+      <p>Stated as plainly as the on-chain record allows, here is the mechanism the analysts describe.</p>
 
-  <p class="lede">Two events, twelve days apart, with nothing obviously in common.</p>
+      <p>An address that had been funded through Tornado Cash (a mixer that obscures where cryptocurrency came from) submitted an EIP-7702 delegation for a Binance-labelled hot wallet. EIP-7702 is an Ethereum feature that lets an ordinary wallet temporarily hand its authority to a smart contract (a program that lives on the blockchain and can move funds when called). Three minutes and twenty-four seconds later, that delegate contract moved 167,464 ETH and sixty-three token types out in a single transaction. The signed authorisation, analysts say, carried fifty delegations, one per anticipated transfer, so that the permission would survive any attempt to revoke it midstream.</p>
 
-  <p>On October 29, on-chain analysts and the security firm Blockaid reported that several billion dollars had left Binance hot wallets (the exchange wallets kept online so customers can withdraw quickly) in a burst of transfers. Public tallies still disagree; figures in circulation run from roughly $2 billion to about $5.8 billion. Binance has said it is investigating a potential security issue while insisting user funds are safe; it has confirmed neither a final loss nor a breach of the kind the word usually implies. If the upper tallies hold, the sum would be more than triple the roughly $1.5 billion taken from Bybit in February 2025.</p>
+      <p>The cryptography did not fail. secp256k1 (the elliptic curve that Bitcoin and Ethereum use for keys) is intact. ECDSA (the Elliptic Curve Digital Signature Algorithm; the mathematics that turns a private key into a valid mark of approval) is intact. No mathematics was broken anywhere in this. Someone obtained the ability to produce one valid authorisation, and that was sufficient.</p>
 
-  <p>On November 10, China's suspended rare-earth export controls either resume or get renegotiated. Rare earths are a set of metals used in tiny quantities inside permanent magnets, electric motors, wind turbines, phones, and a great many weapons systems. The October 2025 package that includes the so-called 0.1% rule is paused, not repealed. The pause notice runs out on the tenth.</p>
+      <p>How that ability was obtained remains open. Three routes have been floated: theft of the private key itself; manipulation of the exchange&#x27;s signing infrastructure into approving a foreign instruction (the pattern of the Bybit theft); or involvement by someone with internal access. The security firm Defimon has classified the case as abuse of an EIP-7702 delegation with a compromised key. Binance has not chosen among them, and neither will this dispatch; the chain already shows the only thing the argument requires, which is that one valid authorisation was enough to empty the wallet.</p>
 
-  <p>One is a private security failure in a digital system; the other is a state licensing regime on physical material.</p>
+      <p><a href="signature-problem.html">Dispatch №03</a> put it this way: &quot;Bitcoin doesn&#x27;t use encryption. It uses signatures.&quot; Seven months on, that reframe has been demonstrated at scale by entirely conventional means. This is not quantum computing, and it is not artificial intelligence. What is confirmed is the reframe, not the threat model. The mathematics held; the permission layer did not.</p>
 
-  <p>A chokepoint, in the sense this series uses, is a narrow place that a great deal of something has to pass through, so that whoever sits on the narrow place acquires leverage. Usually that something is a volume: oil through a strait, cargo through a canal, refining concentrated in one country. Here the controlled object is of a different kind. In both cases, the thing being controlled is not a volume. It is a test.</p>
+    </div>
+  </section>
 
-  <h2><span class="numeral">I</span>What Actually Moved the Money</h2>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter II</div>
+      <h2>One Tenth of One <em>Percent</em></h2>
 
-  <p>Stated as plainly as the on-chain record allows, here is the mechanism the analysts describe.</p>
+      <p>China&#x27;s October 2025 export-control measures (MOFCOM Announcement No. 61 and its companions) are suspended by Announcement No. 70 until November 10, 2026. That date is the administrative deadline written into the pause notice itself. In late September, Beijing said the broader arrangement behind the pause extends to January 10, 2027; as of late October, No. 70 had not been amended. The political statement and the paperwork are not yet the same document. The notice on the books still expires on the tenth.</p>
 
-  <p>An address that had been funded through Tornado Cash (a mixer that obscures where cryptocurrency came from) submitted an EIP-7702 delegation for a Binance-labelled hot wallet. EIP-7702 is an Ethereum feature that lets an ordinary wallet temporarily hand its authority to a smart contract (a program that lives on the blockchain and can move funds when called). Three minutes and twenty-four seconds later, that delegate contract moved 167,464 ETH and sixty-three token types out in a single transaction. The signed authorisation, analysts say, carried fifty delegations, one per anticipated transfer, so that the permission would survive any attempt to revoke it midstream.</p>
+      <p>The controls reach foreign-made products that contain at least 0.1% by value of Chinese-origin rare-earth input (the oxides, metals, alloys, and magnet materials listed in the annex). Read that again. A magnet, a motor, or a component manufactured in Europe, Japan, or the United States can require a Chinese export licence if the Chinese-origin rare earths inside it clear one tenth of one percent of the item&#x27;s value.</p>
 
-  <p>The cryptography did not fail. secp256k1 (the elliptic curve that Bitcoin and Ethereum use for keys) is intact. ECDSA (the Elliptic Curve Digital Signature Algorithm; the mathematics that turns a private key into a valid mark of approval) is intact. No mathematics was broken anywhere in this. Someone obtained the ability to produce one valid authorisation, and that was sufficient.</p>
+      <p>That threshold is the dispatch. It is extraterritoriality (a rule that reaches past a country&#x27;s own borders) by material composition rather than by geography. A strait can be transited under escort; a port can be substituted; a mine can be opened elsewhere within a decade. A composition test cannot be routed around, because the chokepoint is not a place at all. It is a predicate (a yes-or-no condition) attached to a bill of materials.</p>
 
-  <p>How that ability was obtained remains open. Three routes have been floated: theft of the private key itself; manipulation of the exchange's signing infrastructure into approving a foreign instruction (the pattern of the Bybit theft); or involvement by someone with internal access. The security firm Defimon has classified the case as abuse of an EIP-7702 delegation with a compromised key. Binance has not chosen among them, and neither will this dispatch; the chain already shows the only thing the argument requires, which is that one valid authorisation was enough to empty the wallet.</p>
+      <p>The suspension window existed so that the West could stand up separation (splitting mixed rare-earth ore into individual elements), metallisation, alloy production, and qualified-magnet capacity outside China. Pieces of that stack have moved; Lynas and others separate light rare earths at commercial scale, and heavy-element and magnet projects are under way. What has not been built is the full stack that would make the 0.1% rule cheap to ignore. That is the stake of the tenth.</p>
 
-  <p><a href="signature-problem.html">Dispatch №03</a> put it this way: &quot;Bitcoin doesn't use encryption. It uses signatures.&quot; Seven months on, that reframe has been demonstrated at scale by entirely conventional means. This is not quantum computing, and it is not artificial intelligence. What is confirmed is the reframe, not the threat model. The mathematics held; the permission layer did not.</p>
+    </div>
+  </section>
 
-  <h2><span class="numeral">II</span>One Tenth of One Percent</h2>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter III</div>
+      <h2>Predicate <em>Concentration</em></h2>
 
-  <p>China's October 2025 export-control measures (MOFCOM Announcement No. 61 and its companions) are suspended by Announcement No. 70 until November 10, 2026. That date is the administrative deadline written into the pause notice itself. In late September, Beijing said the broader arrangement behind the pause extends to January 10, 2027; as of late October, No. 70 had not been amended. The political statement and the paperwork are not yet the same document. The notice on the books still expires on the tenth.</p>
+      <p>This project&#x27;s first variable has always been measured in volume: twenty million barrels a day through a strait; a percentage of global processing sitting inside one jurisdiction. These two cases are a different species, and the distinction is worth naming.</p>
 
-  <p>The controls reach foreign-made products that contain at least 0.1% by value of Chinese-origin rare-earth input (the oxides, metals, alloys, and magnet materials listed in the annex). Read that again. A magnet, a motor, or a component manufactured in Europe, Japan, or the United States can require a Chinese export licence if the Chinese-origin rare earths inside it clear one tenth of one percent of the item's value.</p>
+      <p>The controlled object here is a predicate. One tenth of one percent of input value governs one hundred percent of a finished product&#x27;s exportability under the rule; one valid signature governs one hundred percent of a wallet. In both, the leverage ratio is extreme, the test is nearly free to apply, and there is no partial satisfaction. You pass or you do not.</p>
 
-  <p>That threshold is the dispatch. It is extraterritoriality (a rule that reaches past a country's own borders) by material composition rather than by geography. A strait can be transited under escort; a port can be substituted; a mine can be opened elsewhere within a decade. A composition test cannot be routed around, because the chokepoint is not a place at all. It is a predicate (a yes-or-no condition) attached to a bill of materials.</p>
+      <p>The consequence that matters is this: volume chokepoints have buffers, and predicate chokepoints have far weaker ones. Strategic reserves, rerouted tonnage, substitution, shadow fleets; every buffer in <a href="The-Maintenance-War.html">№25</a>&#x27;s physical channel exists because throughput is a quantity, and a quantity can be accumulated in advance. Permission accumulates only in narrow forms (a general licence, a pre-approved end user, inventory already cleared under the existing rule), and each of those is extinguished the moment the predicate itself is rewritten. You can store oil against a blockade that has not happened. You cannot store a licence against a rule that has not yet been written.</p>
 
-  <p>The suspension window existed so that the West could stand up separation (splitting mixed rare-earth ore into individual elements), metallisation, alloy production, and qualified-magnet capacity outside China. Pieces of that stack have moved; Lynas and others separate light rare earths at commercial scale, and heavy-element and magnet projects are under way. What has not been built is the full stack that would make the 0.1% rule cheap to ignore. That is the stake of the tenth.</p>
+      <p>The second property is that predicate chokepoints are invisible until invoked. A narrowing strait is observable in the tape (ship counts, insurance quotes, the Brent curve). A composition rule or a signature requirement sits dormant and costs nothing at all until the day it is enforced, and then it is total.</p>
 
-  <h2><span class="numeral">III</span>Predicate Concentration</h2>
+      <p>A concrete picture helps. Imagine a bridge carrying twenty million cars a day. You can widen the lanes, build a second bridge, stockpile fuel on the far side, or send the trucks the long way around; those are volume buffers. Now imagine a gate that opens only if your paperwork carries a particular stamp. One missing stamp stops the whole truck, however full the warehouses are. That is a predicate, and you do not solve it with more trucks.</p>
 
-  <p>This project's first variable has always been measured in volume: twenty million barrels a day through a strait; a percentage of global processing sitting inside one jurisdiction. These two cases are a different species, and the distinction is worth naming.</p>
+      <p>Volume concentration asks how much flows through one place. Predicate concentration asks who holds the test that every flow must pass.</p>
 
-  <p>The controlled object here is a predicate. One tenth of one percent of input value governs one hundred percent of a finished product's exportability under the rule; one valid signature governs one hundred percent of a wallet. In both, the leverage ratio is extreme, the test is nearly free to apply, and there is no partial satisfaction. You pass or you do not.</p>
+    </div>
+  </section>
 
-  <p>The consequence that matters is this: volume chokepoints have buffers, and predicate chokepoints have far weaker ones. Strategic reserves, rerouted tonnage, substitution, shadow fleets; every buffer in <a href="The-Maintenance-War.html">№25</a>'s physical channel exists because throughput is a quantity, and a quantity can be accumulated in advance. Permission accumulates only in narrow forms (a general licence, a pre-approved end user, inventory already cleared under the existing rule), and each of those is extinguished the moment the predicate itself is rewritten. You can store oil against a blockade that has not happened. You cannot store a licence against a rule that has not yet been written.</p>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter IV</div>
+      <h2>Who Actually Holds the <em>Switch</em></h2>
 
-  <p>The second property is that predicate chokepoints are invisible until invoked. A narrowing strait is observable in the tape (ship counts, insurance quotes, the Brent curve). A composition rule or a signature requirement sits dormant and costs nothing at all until the day it is enforced, and then it is total.</p>
+      <p>Within hours of the Binance outflows, Tether froze over $1.5 billion in USDT (its dollar stablecoin; a token meant to hold a value of one dollar, issued by a private company that can blacklist addresses at will). Circle froze roughly $823 million in USDC. Aave, a major lending protocol, froze its lending markets so that the attacker could not deposit stolen assets as collateral and borrow fresh funds against them. Three private parties exercised unilateral authority, faster than any protocol governance process could have convened.</p>
 
-  <p>A concrete picture helps. Imagine a bridge carrying twenty million cars a day. You can widen the lanes, build a second bridge, stockpile fuel on the far side, or send the trucks the long way around; those are volume buffers. Now imagine a gate that opens only if your paperwork carries a particular stamp. One missing stamp stops the whole truck, however full the warehouses are. That is a predicate, and you do not solve it with more trucks.</p>
+      <p>The 0.1% rule works the same way. It is not enforced mainly at Chinese customs; it is enforced by every manufacturer on earth certifying the composition of its own supply chain. The state writes the predicate, and private compliance departments execute it.</p>
 
-  <p>Volume concentration asks how much flows through one place. Predicate concentration asks who holds the test that every flow must pass.</p>
+      <p><a href="signature-problem.html">Dispatch №03</a> argued that the quantum threat was a slow-motion governance test: not a machine that arrives one morning and drains every wallet, but a migration fight over who decides what happens to signatures when the old mathematics stops being safe. That test has now been run, triggered by an entirely different cause, and the answer is on the record. Crypto&#x27;s emergency governance, when billions are already moving, is a small number of private issuers with blacklist functions.</p>
 
-  <h2><span class="numeral">IV</span>Who Actually Holds the Switch</h2>
+      <p>So if a cryptographically relevant quantum computer (a machine large and stable enough to break today&#x27;s signature schemes) ever does arrive, the response will not resemble the orderly ML-DSA migration (the post-quantum signature standard NIST has already published) that the standards bodies model. Standards bodies imagine committees, timelines, and coordinated upgrades. What October 29 showed, under a different cause, is that when money is already in motion, the actors who can stop it are private issuers with blacklist buttons rather than a standards process. The response will resemble Tether deciding which addresses are legitimate. That is not a prediction about quantum hardware; it is a reading of who already holds the switch when speed matters.</p>
 
-  <p>Within hours of the Binance outflows, Tether froze over $1.5 billion in USDT (its dollar stablecoin; a token meant to hold a value of one dollar, issued by a private company that can blacklist addresses at will). Circle froze roughly $823 million in USDC. Aave, a major lending protocol, froze its lending markets so that the attacker could not deposit stolen assets as collateral and borrow fresh funds against them. Three private parties exercised unilateral authority, faster than any protocol governance process could have convened.</p>
+    </div>
+  </section>
 
-  <p>The 0.1% rule works the same way. It is not enforced mainly at Chinese customs; it is enforced by every manufacturer on earth certifying the composition of its own supply chain. The state writes the predicate, and private compliance departments execute it.</p>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Chapter V</div>
+      <h2>The Reading, Held <em>Loosely</em></h2>
 
-  <p><a href="signature-problem.html">Dispatch №03</a> argued that the quantum threat was a slow-motion governance test: not a machine that arrives one morning and drains every wallet, but a migration fight over who decides what happens to signatures when the old mathematics stops being safe. That test has now been run, triggered by an entirely different cause, and the answer is on the record. Crypto's emergency governance, when billions are already moving, is a small number of private issuers with blacklist functions.</p>
+      <p>November 10 is this month&#x27;s MARAD advisory: an administrative expiry that will be reported almost nowhere, produced by people under load, encoding what one institution believes about its own exposure as distinct from what it says. Beijing can say January; the pause notice still says November until somebody amends it. Paperwork was the tell <a href="The-Maintenance-War.html">№25</a> closed on, and it still is.</p>
 
-  <p>So if a cryptographically relevant quantum computer (a machine large and stable enough to break today's signature schemes) ever does arrive, the response will not resemble the orderly ML-DSA migration (the post-quantum signature standard NIST has already published) that the standards bodies model. Standards bodies imagine committees, timelines, and coordinated upgrades. What October 29 showed, under a different cause, is that when money is already in motion, the actors who can stop it are private issuers with blacklist buttons rather than a standards process. The response will resemble Tether deciding which addresses are legitimate. That is not a prediction about quantum hardware; it is a reading of who already holds the switch when speed matters.</p>
+      <p>Two dates now sit one week apart. The midterm elections fall on November 3, and the restraint <a href="The-Scheduled-War.html">№26</a> described was pledged to that date rather than to any condition; American and Israeli officials have since indicated that renewed strikes on Iran are likely soon afterward. The pause notice expires on the 10th. A third decision follows at a distance, and has already been deferred once: the Federal Reserve held on October 28 in a ten-to-two vote, with two governors dissenting in favour of a rise and Chair Warsh stating that politics played no role in the timing, leaving the next move to December 8 and 9.</p>
 
-  <h2><span class="numeral">V</span>The Reading, Held Loosely</h2>
+      <p>These are not one coordinated plan. It is what happens when a stretch of dates becomes the dominant uncertainty and unrelated actors independently route their own choices around it; water finds a channel, and calendars do the same to institutions.</p>
 
-  <p>November 10 is this month's MARAD advisory: an administrative expiry that will be reported almost nowhere, produced by people under load, encoding what one institution believes about its own exposure as distinct from what it says. Beijing can say January; the pause notice still says November until somebody amends it. Paperwork was the tell <a href="The-Maintenance-War.html">№25</a> closed on, and it still is.</p>
+      <p>The asymmetry is where this ends. The election can be absorbed and the rate decision can be deferred again; a hold extends, a strike waits. The tenth has no soft landing of that kind, because a control either resumes or is renegotiated, and the capacity the pause was meant to buy was not bought at the scale the rule requires. A volume chokepoint forgives delay with inventory. A predicate chokepoint does not. Permission is not a stockpile.</p>
 
-  <p>Two dates now sit one week apart. The midterm elections fall on November 3, and the restraint <a href="The-Scheduled-War.html">№26</a> described was pledged to that date rather than to any condition; American and Israeli officials have since indicated that renewed strikes on Iran are likely soon afterward. The pause notice expires on the 10th. A third decision follows at a distance, and has already been deferred once: the Federal Reserve held on October 28 in a ten-to-two vote, with two governors dissenting in favour of a rise and Chair Warsh stating that politics played no role in the timing, leaving the next move to December 8 and 9.</p>
+    </div>
+  </section>
 
-  <p>These are not one coordinated plan. It is what happens when a stretch of dates becomes the dominant uncertainty and unrelated actors independently route their own choices around it; water finds a channel, and calendars do the same to institutions.</p>
+  <section class="chapter">
+    <div class="container">
+      <div class="chapter-num">Falsification</div>
+      <h2><em>Falsification</em></h2>
 
-  <p>The asymmetry is where this ends. The election can be absorbed and the rate decision can be deferred again; a hold extends, a strike waits. The tenth has no soft landing of that kind, because a control either resumes or is renegotiated, and the capacity the pause was meant to buy was not bought at the scale the rule requires. A volume chokepoint forgives delay with inventory. A predicate chokepoint does not. Permission is not a stockpile.</p>
+      <p>China extends the pause without conditions → the leverage is negotiable rather than structural, and the predicate framing weakens.</p>
 
-  <h2 class="unnumbered">Falsification</h2>
+      <p>Binance confirms an insider rather than a key or signing-infrastructure compromise → the authorisation-layer argument narrows to personnel security, which is a much older and smaller claim.</p>
 
-  <ol class="claims">
-    <li>China extends the pause without conditions → the leverage is negotiable rather than structural, and the predicate framing weakens.</li>
-    <li>Binance confirms an insider rather than a key or signing-infrastructure compromise → the authorisation-layer argument narrows to personnel security, which is a much older and smaller claim.</li>
-    <li>Western separation and magnet capacity turns out to have been quietly built during the window → Section II is wrong about the stakes.</li>
-    <li>A predicate chokepoint is invoked somewhere and proves absorbable (de minimis exemptions widen, licences issue by default, products are reclassified below the threshold) → the no-buffer property fails, and predicate concentration collapses back into volume concentration with extra paperwork.</li>
-    <li>Any future cryptographic migration proceeds through orderly, standards-led coordination → Section IV is wrong about who holds the switch.</li>
-  </ol>
+      <p>Western separation and magnet capacity turns out to have been quietly built during the window → Section II is wrong about the stakes.</p>
+
+      <p>A predicate chokepoint is invoked somewhere and proves absorbable (de minimis exemptions widen, licences issue by default, products are reclassified below the threshold) → the no-buffer property fails, and predicate concentration collapses back into volume concentration with extra paperwork.</p>
+
+      <p>Any future cryptographic migration proceeds through orderly, standards-led coordination → Section IV is wrong about who holds the switch.</p>
+
+    </div>
+  </section>
 
   <!-- Callbacks: №03 signatures/governance test; №25 physical-channel buffers, MARAD advisory; №26 calendar as governing variable, strikes pledged to a date. -->
 
-  <footer class="colophon">
-    <p class="filed">Filed October 2026. A structured guess, not a prediction.</p>
-    <p>Figures as of 29 October 2026. Binance has confirmed no loss figure, and the outflow range is analyst reconstruction rather than disclosure; the distinction is part of the argument.</p>
-    <p><a href="index.html">← Fieldnotes index</a></p>
-  </footer>
+
+  <div class="coda">
+    <div class="container">
+      <p class="coda-text">Filed October 2026. A structured guess, not a prediction.</p>
+      <p style="margin-top:2rem;font-size:0.85em;opacity:0.75;">Figures as of 29 October 2026. Binance has confirmed no loss figure, and the outflow range is analyst reconstruction rather than disclosure; the distinction is part of the argument.</p>
+    </div>
+  </div>
 
 </article>
+
+<a href="index.html" class="return-link">← Return to the archive</a>
+
+<footer>
+  <p>Fieldnotes <span class="diamond"></span> №27 — The Qualifying Fraction <span class="diamond"></span> October 29, 2026</p>
+  <p><a href="index.html" style="color:inherit;text-decoration:none;">← Fieldnotes index</a></p>
+</footer>
+
 </body>
 </html>
